@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Teacher's Input Section -->
+        <div id="teacherSection">
+            <h2>Create Quiz Questions</h2>
+            <form id="questionForm">
+                <input type="text" id="questionText" placeholder="Enter question" required>
+                <input type="text" id="correctAnswer" placeholder="Correct answer" required>
+                <button type="submit">Add Question</button>
+            </form>
+            <button id="startQuiz" style="display: none;">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Section -->
+        <div id="quizSection" style="display: none;">
+            <div id="progress">Question <span id="currentQuestion">1</span> of <span id="totalQuestions">0</span></div>
+            <div id="questionDisplay"></div>
+            <input type="text" id="userAnswer" placeholder="Your answer">
+            <button id="submitAnswer">Submit Answer</button>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" style="display: none;">
+            <h2>Quiz Results</h2>
+            <p>Score: <span id="score">0</span>/<span id="totalScore">0</span></p>
+            <button id="restartQuiz">Restart Quiz</button>
+        </div>
+    </div>
+    <script src="js/quiz.js"></script>
+</body>
+</html>
